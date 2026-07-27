@@ -60,6 +60,6 @@ try:
     print('Successfully Transfered File',style='bright_green')
 except Exception as e:
     print('[!] Error',style='bright_red')
-    print(e)
+    print(str(e))
 
 
