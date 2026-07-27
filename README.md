@@ -523,7 +523,10 @@ file-transfer-pro
 # 6. Run the Server Container
 
 ```cmd
-docker run -it --rm -p 5050:5050 file-transfer-pro
+docker run --rm -it ^
+-p 5050:5050 ^
+-v "%cd%:/app" ^
+file-transfer-pro
 ```
 
 The server will start and wait for incoming client connections.
@@ -535,7 +538,9 @@ The server will start and wait for incoming client connections.
 Open another terminal and run:
 
 ```cmd
-docker run -it --rm file-transfer-pro python client.py
+docker run --rm -it ^
+-v "%cd%:/app" ^
+file-transfer-pro python client.py
 ```
 
 If the server is running on your Windows host, enter:
